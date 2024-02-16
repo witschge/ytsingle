@@ -1,20 +1,19 @@
 import React from "react";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import Sidebar from "./components/sidebar/Sidebar";
+import VideoPlayer from "./components/VideoPlayer";
 
 function App() {
   return (
     <div>
-      YouTube Single Page
-      <div
-        style={{
-          marginTop: "20px",
-          textAlign: "center",
-          position: "fixed",
-          bottom: "0",
-          width: "100%",
-        }}
-      >
-        Made with ❤️ by witschge
-      </div>
+      <Header />
+      <main>
+        <VideoPlayer />
+      </main>
+      <Sidebar />
+
+      <Footer />
     </div>
   );
 }
