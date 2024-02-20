@@ -28,25 +28,42 @@ function CommentSection() {
   };
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Nickname"
-        value={nickname}
-        onChange={(e) => setNickname(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Your comment..."
-        value={newComment}
-        onChange={(e) => setNewComment(e.target.value)}
-      />
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-start",
+        marginBottom: "20px",
+      }}
+    >
+      <div
+        style={{
+          marginBottom: "8px",
+          display: "flex",
+          justifyContent: "space-between",
+          width: "100%",
+        }}
+      >
+        <input
+          type="text"
+          placeholder="Nickname"
+          value={nickname}
+          onChange={(e) => setNickname(e.target.value)}
+          style={{ width: "20%" }}
+        />
+        <input
+          type="text"
+          placeholder="Your comment..."
+          value={newComment}
+          onChange={(e) => setNewComment(e.target.value)}
+          style={{ flex: 1, marginLeft: "10px" }}
+        />
+      </div>
       <button onClick={addComment}>Add a comment</button>
       <ul>
         {comments.map((comment) => (
-          <li key={comment.id}>
-            <strong>{comment.nickname}</strong>
-            {comment.text}
+          <li key={comment.id} style={{ marginBottom: "8px" }}>
+            <strong>{comment.nickname}</strong> {comment.text}
           </li>
         ))}
       </ul>

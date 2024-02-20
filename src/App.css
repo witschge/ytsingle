@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #98a6f7;
+}
+.main-container {
+  flex: 1;
+}
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5%;
+}
+
+.comment-section {
+  width: 100%;
+  max-width: 80%;
+  margin-top: 5px;
+}
